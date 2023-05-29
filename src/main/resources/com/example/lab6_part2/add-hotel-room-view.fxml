@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefHeight="350.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab6_part2.AddHotelRoomController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <Label text="Опис кімнати" />
+        <Label text="Скільки місць" GridPane.rowIndex="1" />
+        <Label text="Вартість за ніч" GridPane.rowIndex="2" />
+        <Label minWidth="300" text="Заброньовано" GridPane.rowIndex="3" />
+        <Label text="Дата заселення" GridPane.rowIndex="4" />
+        <Label  text="Кількість днів проживання" GridPane.rowIndex="5" />
+        <Button mnemonicParsing="false" onAction="#addHotelRoomToFile" prefHeight="26.0" prefWidth="85.0" text="Зберегти" textAlignment="CENTER" GridPane.rowIndex="7">
+            <GridPane.margin>
+                <Insets left="63.0" />
+            </GridPane.margin>
+        </Button>
+        <TextField fx:id="description" GridPane.columnIndex="1" />
+        <TextField fx:id="capacity" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="price" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <CheckBox fx:id="isOccupied" alignment="CENTER" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField fx:id="checkInDate" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <TextField fx:id="lengthOfStay" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    </children>
+</GridPane>
